@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-JS</title>
+</head>
+<body>
+    
+
+
+
+    <script src="practice1.js"></script>
+    <script>
+        //q1
+    var emp = {};
+
+    //q2
+
+    function introduceYou() {
+        console.log('Hello,my name is '+person.name)
+    }
+
+    var person = {name:"kajan",age:21,function:introduceYou};
+
+
+
+
+    console.log(introduceYou());
+
+    //q3
+
+    var student = {stname:'kajan'};
+
+    function greetStudent() {
+        console.log('Hello '+student.stname+' Welcome to the Coding School')
+
+    }
+    console.log(greetStudent());
+
+    //q4 
+
+    console.log(person.age);
+    console.log(person["age"]);
+
+    //q5 add new property to obj
+
+    person.email='john@gamil.com'
+    console.log(person);
+
+    //q6 to remove
+    delete(person.email)
+    console.log(person);
+
+
+    //q7  check if it's exist
+
+    // console.log(person.email);
+
+    //q8 merge obj
+    var student = {stname:'kajan'};
+    var course = {coname:'fullstack'};
+    
+    var studentCourse = {student,course} ;
+    console.log(studentCourse);
+
+    //q9 check if it's exist
+    console.log(student.address);
+
+
+    //q10 obj to json
+
+    var book = {
+
+        title:"untitled",
+        author:"kajan",
+        year:2023
+    };
+
+    var examp = toString(book);
+    console.log(examp);
+
+    //q11 array in objects
+
+    var students = {
+
+        name:"kajan",
+        age:21,
+        gpa:0
+
+
+    };
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
