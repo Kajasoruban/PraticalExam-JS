@@ -1,47 +1,82 @@
-// //q1
-// var emp = {};
+//q1
 
-// //q2
+const emp = {};
 
-// function introduceYou() {
-//     console.log('Hello,my name is '+person.name)
-     
+//q2
 
-// }
+const person = {
 
-// var person = {name:"kajan",age:21,function:introduceYou};
+    name:"kajan",
+    age:21,
+    introduceYou: function() {
+
+        return 'Hello,my name is '+ this.name;
+    }
+
+};
+
+console.log(person.introduceYou());
+
+//q3
+
+var student = {stname:'kajan'};
+
+function greetStudent() {
+    return 'Hello '+student.stname+' Welcome to the Coding School'
+
+}
+
+console.log(greetStudent());
+
+//q4 
+
+console.log(person.age);
+console.log(person["age"]);
+
+//q5 add new property to obj
+
+person.email='john@gamil.com';
+console.log(person);
+
+//q6 to remove
+delete person.email;
+console.log(person);
 
 
+//q7  check if it's exist
+
+console.log(person.hasOwnProperty('age'));
+
+//q8 merge obj
+var student = {stname:'kajan'};
+var course = {coname:'fullstack'};
+
+var studentCourse = {...student,...course} ;
+console.log(studentCourse);
+
+//q9 check if it's exist
+console.log(student.address);
 
 
-// console.log(introduceYou());
+//q10 obj to json
 
-// //q3
+var book = {
 
-// var student = {stname:'kajan'};
+    title:"untitled",
+    author:"kajan",
+    year:2023
+};
 
-// function greetStudent() {
-//     console.log('Hello '+student.stname+' Welcome to the Coding School')
+var examp = JSON.stringify(book);
+console.log(examp);
 
-// }
-// console.log(greetStudent());
+//q11 array in objects
 
-// //q4
+var students = {
 
-// console.log(person.age);
-// // console.log(person);
-
-// //q5
-
-// person.email='john@gamil.com'
-// console.log(person);
-
-// //q6
+    name:"kajan",
+    age:21,
+    gpa:0
 
 
-// //q7
-
-// console.log(match(person.name))
-
-// //q8
-//  var course
+};
