@@ -9,24 +9,34 @@ const person = {
     name:"kajan",
     age:21,
     introduceYou: function() {
+        console.log('Hello,my name is '+ this.name);
 
-        return 'Hello,my name is '+ this.name;
+        // return 'Hello,my name is '+ this.name;
     }
 
 };
 
-console.log(person.introduceYou());
+person.introduceYou();
 
 //q3
 
-var student = {stname:'kajan'};
+var student = {
+    
+    greetStudent:function greetStudent(student) {
+        console.log(`Hello ${student.stname} Welcome to the Coding School`);
+    
+        // return 'Hello '+this.stname+' Welcome to the Coding School'
+    
+    }
 
-function greetStudent() {
-    return 'Hello '+student.stname+' Welcome to the Coding School'
 
-}
+};
 
-console.log(greetStudent());
+student.greetStudent({stname:'kajan'});
+
+// student.stname='kajan';
+
+// console.log(student)
 
 //q4 
 
@@ -52,11 +62,14 @@ var student = {stname:'kajan'};
 var course = {coname:'fullstack'};
 
 var studentCourse = {...student,...course} ;
+// var studentCourse = Object.assign(student,course);
+
 console.log(studentCourse);
 
 //q9 check if it's exist
-console.log(student.address);
 
+student.hasOwnProperty('address') ? console.log('Address is there'):
+console.log('Address not found');
 
 //q10 obj to json
 
@@ -72,11 +85,22 @@ console.log(examp);
 
 //q11 array in objects
 
-var students = {
-
-    name:"kajan",
-    age:21,
+var students = [
+   {
+    name:"one",
+    age:1,
     gpa:0
+   },
+   {
+    name:"two",
+    age:2,
+    gpa:0
+   },
+   {
+    name:"three",
+    age:3,
+    gpa:0
+   }
 
-
-};
+];
+console.log(students);
